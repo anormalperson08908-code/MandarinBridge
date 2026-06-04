@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Learning Modules</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/vocabulary">Vocabulary</a>
+      <a href="/grammar">Grammar</a>
+      <a href="/pronunciation">Pronunciation</a>
+      <a href="/extra-learning">Extra Learning</a>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Learning Modules</h1>
+    <p class="lead">Modules divide Mandarin learning into focused areas so students can build skill step by step.</p>
+    <section class="grid">
+      <a class="card" href="/vocabulary"><h2>Vocabulary</h2><p>Learn useful words and phrases for everyday communication.</p></a>
+      <a class="card" href="/grammar"><h2>Grammar</h2><p>Understand sentence patterns and basic structure.</p></a>
+      <a class="card" href="/pronunciation"><h2>Pronunciation</h2><p>Practice tones, pinyin, and speaking confidence.</p></a>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 MandarinBridge.</p></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>

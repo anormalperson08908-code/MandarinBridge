@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/about">About</a>
+      <a href="/support">Support</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section>
+      <span class="tag">Mandarin learning platform</span>
+      <h1>Learn Mandarin with structure, practice, and confidence.</h1>
+      <p>MandarinBridge helps students move from beginner phrases to practical communication through lessons, quizzes, pronunciation support, cultural learning, and progress tracking.</p>
+      <div class="button-row">
+        <a class="button" href="/register">Create Account</a>
+        <a class="button secondary" href="/login">Login</a>
+        <a class="button light" href="/about">Learn More</a>
+      </div>
+    </section>
+    <aside class="hero-art" aria-hidden="true">
+      <div class="hero-art-frame">
+        <svg class="hero-art-svg" viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="skyWash" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fff7ec"/>
+              <stop offset="45%" stop-color="#e8f2f7"/>
+              <stop offset="100%" stop-color="#fdeee4"/>
+            </linearGradient>
+            <linearGradient id="mountFar" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#a8b8c8"/>
+              <stop offset="100%" stop-color="#8a9aac"/>
+            </linearGradient>
+            <linearGradient id="mountMid" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#6d7d8f"/>
+              <stop offset="100%" stop-color="#4a5866"/>
+            </linearGradient>
+            <linearGradient id="waterRipple" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#c5d8e4" stop-opacity="0.35"/>
+              <stop offset="50%" stop-color="#d4e4ed" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#c5d8e4" stop-opacity="0.35"/>
+            </linearGradient>
+            <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <rect width="400" height="340" fill="url(#skyWash)"/>
+          <ellipse cx="200" cy="255" rx="220" ry="38" fill="#eef5f9" fill-opacity="0.65"/>
+          <path d="M0 228 L72 138 L140 198 L210 118 L278 188 L332 132 L400 168 L400 340 L0 340 Z" fill="url(#mountFar)" fill-opacity="0.42"/>
+          <path d="M0 248 L96 168 L168 232 L248 152 L318 208 L372 172 L400 198 L400 340 L0 340 Z" fill="url(#mountFar)" fill-opacity="0.55"/>
+          <path d="M0 268 L118 198 L196 258 L288 178 L362 228 L400 210 L400 340 L0 340 Z" fill="url(#mountMid)" fill-opacity="0.5"/>
+          <path d="M0 288 L148 232 L224 278 L320 228 L400 252 L400 340 L0 340 Z" fill="#2c3d4d" fill-opacity="0.72"/>
+          <path d="M0 302 C80 288 120 308 200 295 S320 278 400 292 L400 340 L0 340 Z" fill="url(#waterRipple)"/>
+          <circle cx="310" cy="78" r="26" fill="#ffd8c9" fill-opacity="0.92" filter="url(#softGlow)"/>
+          <circle cx="310" cy="78" r="32" fill="#fff0e8" fill-opacity="0.35"/>
+          <g fill="none" stroke="#5c4033" stroke-width="1.6" stroke-linecap="round" opacity="0.55">
+            <path d="M52 98 Q78 82 102 98"/>
+            <path d="M72 110 L96 72 Q112 56 122 68"/>
+            <path d="M88 108 L118 76"/>
+          </g>
+          <g fill="#c23a30" fill-opacity="0.9">
+            <rect x="302" y="44" width="40" height="48" rx="4" transform="rotate(-6 322 68)"/>
+            <rect x="309" y="52" width="26" height="32" rx="2" fill="#fde8e4" fill-opacity="0.25"/>
+          </g>
+          <path d="M118 228 Q200 248 282 232" fill="none" stroke="#8b6914" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+        </svg>
+      </div>
+      <p class="hero-art-caption">Mountains and water — a quiet moment before your next lesson.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 MandarinBridge.</p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>
