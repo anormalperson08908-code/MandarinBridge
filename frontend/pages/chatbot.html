@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Chatbot</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/modules">Lessons</a>
+      <a href="/quiz">Quiz</a>
+      <a href="/progress">Progress</a>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Mandarin Chatbot</h1>
+    <p class="lead">The chatbot area is designed for conversation practice and guided language support.</p>
+    <section class="card">
+      <h2>Practice Conversation</h2>
+      <p><strong>Bot:</strong> Ni hao! How would you greet someone in Mandarin?</p>
+      <form class="form">
+        <label>Your reply
+          <input type="text" placeholder="Type your answer">
+        </label>
+        <button class="button" type="button">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 MandarinBridge.</p></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>

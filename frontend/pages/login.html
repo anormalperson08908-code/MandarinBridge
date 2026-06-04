@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Login</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/about">About</a>
+      <a href="/support">Support</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">Login</h1>
+    <p class="lead">Welcome back. Sign in to reach your dashboard, saved progress, and lessons.</p>
+    <form id="login-form" class="form card">
+      <div id="login-server-error" class="server-error" hidden></div>
+      <label>Email
+        <input id="login-email" name="email" type="email" required autocomplete="email" maxlength="120" placeholder="student@example.com">
+      </label>
+      <label>Password
+        <input id="login-password" name="password" type="password" required autocomplete="current-password" minlength="1" maxlength="128" placeholder="Enter password">
+      </label>
+      <button class="button" type="submit">Login</button>
+      <p class="lead" style="margin-top: 16px;">Need an account? <a href="/register">Register</a></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 MandarinBridge.</p>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/auth-forms.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>

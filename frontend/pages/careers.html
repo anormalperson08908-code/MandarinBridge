@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Careers</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/about">About</a>
+      <a href="/team">Team</a>
+      <a href="/news">News</a>
+      <a href="/faqs">FAQs</a>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Careers</h1>
+    <p class="lead">Explore roles that help learners worldwide build Mandarin skills with clarity and care.</p>
+    <section class="grid">
+      <div class="card"><h2>Language Content Writer</h2><p>Creates Mandarin lessons and cultural notes.</p></div>
+      <div class="card"><h2>Learning Support Assistant</h2><p>Helps students use the platform effectively.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 MandarinBridge.</p></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>

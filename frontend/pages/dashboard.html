@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Dashboard</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/profile">Profile</a>
+      <a href="/modules">Lessons</a>
+      <a href="/quiz">Quiz</a>
+      <a href="/chatbot">Chatbot</a>
+      <a href="/progress">Progress</a>
+      <a href="/support">Support</a>
+      <button id="logout-button" type="button" class="button small secondary" style="border: none;">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">Student Dashboard</h1>
+    <p class="lead">This dashboard is the main hub after login. It connects students to lessons, quizzes, chatbot practice, and progress tracking.</p>
+    <section class="grid">
+      <a class="card" href="/modules">
+        <span class="tag">Lessons</span>
+        <h2>Learning Modules</h2>
+        <p>Start structured vocabulary, grammar, and pronunciation practice.</p>
+      </a>
+      <a class="card" href="/quiz">
+        <span class="tag">Assessment</span>
+        <h2>Quiz</h2>
+        <p>Check understanding with short assessments.</p>
+      </a>
+      <a class="card" href="/chatbot">
+        <span class="tag">Practice</span>
+        <h2>Chatbot</h2>
+        <p>Practice simple Mandarin conversations.</p>
+      </a>
+      <a class="card" href="/progress">
+        <span class="tag">Tracking</span>
+        <h2>Progress</h2>
+        <p>Review progress, reports, and completed learning goals.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 MandarinBridge.</p>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/profile-app.js"></script>
+  <script>
+(async function () {
+  try {
+    const response = await fetch('/api/users/me', {
+      method: 'GET',
+      credentials: 'include'
+    });
+
+    if (!response.ok) {
+      window.location.replace('/login');
+      return;
+    }
+
+    const data = await response.json();
+
+    if (!data || !data.user) {
+      window.location.replace('/login');
+    }
+
+  } catch (err) {
+    console.error(err);
+    window.location.replace('/login');
+  }
+})();
+</script>
+<script src="../js/page-loader.js"></script>
+</body>
+</html>

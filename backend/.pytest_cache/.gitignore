@@ -1,0 +1,19 @@
+# Created by pytest automatically.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+venv/
+env/
+database/*.db
+*.db
+.DS_Store
+*.log
+lighthouse-report.json
