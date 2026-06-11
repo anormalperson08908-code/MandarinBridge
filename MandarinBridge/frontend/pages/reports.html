@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Reports</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/progress">Progress</a>
+      <a href="/quiz">Quiz</a>
+      <a href="/modules">Modules</a>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Reports</h1>
+    <p class="lead">Reports summarize learning activity and help students understand what to study next.</p>
+    <section class="grid">
+      <div class="card"><h2>Weekly Summary</h2><p>4 lessons completed, 2 quizzes attempted, 1 chatbot session.</p></div>
+      <div class="card"><h2>Best Skill</h2><p>Vocabulary practice is currently the strongest area.</p></div>
+      <div class="card"><h2>Next Focus</h2><p>Review tones and pronunciation drills.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 MandarinBridge.</p></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>

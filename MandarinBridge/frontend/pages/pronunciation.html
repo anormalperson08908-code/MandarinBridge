@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Pronunciation</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/modules">Modules</a>
+      <a href="/vocabulary">Vocabulary</a>
+      <a href="/grammar">Grammar</a>
+      <a href="/quiz">Quiz</a>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Pronunciation</h1>
+    <p class="lead">Pronunciation practice focuses on pinyin, initials, finals, and Mandarin tones.</p>
+    <section class="grid">
+      <div class="card"><h2>Four Tones</h2><p>Practice tone shape and meaning changes.</p></div>
+      <div class="card"><h2>Pinyin</h2><p>Connect Romanized spelling with Mandarin sounds.</p></div>
+      <div class="card"><h2>Speaking Drills</h2><p>Repeat short words and phrases to build confidence.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 MandarinBridge.</p></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>

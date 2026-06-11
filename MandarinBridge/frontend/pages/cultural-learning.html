@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MandarinBridge | Cultural Learning</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Ensure loading overlay works properly */
+    .page-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #fffaf2 0%, #ffe4d6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+    .page-loading.hide {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MandarinBridge</a>
+    <nav class="nav-links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/extra-learning">Extra Learning</a>
+      <a href="/modules">Modules</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Cultural Learning</h1>
+    <p class="lead">Language learning is stronger when students also understand cultural context.</p>
+    <section class="grid">
+      <div class="card"><h2>Festivals</h2><p>Learn about major celebrations and useful greetings.</p></div>
+      <div class="card"><h2>Etiquette</h2><p>Understand respectful communication habits.</p></div>
+      <div class="card"><h2>Daily Life</h2><p>Connect language to real situations and places.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; 2026 MandarinBridge.</p></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/page-loader.js"></script>
+</body>
+</html>
